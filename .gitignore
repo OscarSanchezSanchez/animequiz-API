@@ -27,4 +27,7 @@ coverage
 benchmarks/graphs
 
 # build path 
-/build
+/dist
+
+#uploads path
+/uploads/*
