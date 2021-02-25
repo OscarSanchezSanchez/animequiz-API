@@ -2,7 +2,9 @@ import express from 'express';
 import morgan from 'morgan';
 import path from 'path';
 
-import indexRoutes from './routes/index';
+import seriesRoutes from './routes/series';
+import queryRoutes from './routes/queries';
+
 
 const app = express();
 
@@ -14,7 +16,8 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 //routes
-app.use("/api", indexRoutes);
+app.use("/api", seriesRoutes);
+app.use("/api/quiz", queryRoutes);
 
 //this folder for this app will be used to store public files
 app.use("/uploads", express.static(path.resolve('uploads')));
