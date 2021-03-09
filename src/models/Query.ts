@@ -4,6 +4,7 @@ const querySchema = new Schema(
     {
         serie_id: String,
         query_text: String,
+        diddicult: String,
         imagePath: String,
         responses: [{
             response: String,
@@ -19,6 +20,8 @@ const querySchema = new Schema(
 interface IQuery extends Document{
     serie_id: string,
     query_text: string,
+    difficult: string,
+    imagePath: string
     responses: [{
         response: string,
         correct: boolean

@@ -4,11 +4,11 @@ const router = Router();
 import {saveSerie, getSeries, getSerie, deleteSerie, updateSerie} from '../controllers/series.controller';
 import multer from '../libs/multer';
 
-router.route("/serie")
+router.route("/")
     .get(getSeries)
     .post(multer.single('image'), saveSerie);
     
-router.route("/serie/:id")
+router.route("/:id")
     .get(getSerie)
     .delete(deleteSerie)
     .put(updateSerie);
